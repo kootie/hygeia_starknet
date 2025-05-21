@@ -2,6 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes typewriter {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #db2777; /* Tailwind's pink-600 */
+  width: 0;
+  animation:
+    typewriter 3s steps(16) 1s 1 normal both,
+    blink-caret 0.75s step-end infinite;
+}
+
+
 @layer base {
   :root {
     --background: 0 0% 100%;
