@@ -1,7 +1,7 @@
 // app/products/page.tsx
 import { createServerComponentClient } from '@supabase/auth-helpers-nextjs'
 import { cookies } from 'next/headers'
-import ProductCard from '@/componentss/ProductCard'
+import ProductCard from '@/components/ProductCard'
 
 type Product = {
   id: string
