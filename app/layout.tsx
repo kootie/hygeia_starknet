@@ -39,7 +39,7 @@ export default function RootLayout({
             disableTransitionOnChange
           >
             <div className="flex flex-col min-h-screen">
-              <nav className="sticky top-0 z-50 w-full border-b border-b-foreground/10 h-16 bg-background">
+              <nav className="sticky top-0 z-50 w-full border-b border-b-foreground/10 h-16 bg-pink-50 dark:bg-gray-900 transition-colors duration-300">
                 <div className="max-w-5xl mx-auto flex justify-between items-center h-full px-4">
                   <div className="flex gap-5 items-center font-semibold">
                     <Link href={"/"}>Home</Link>
@@ -51,7 +51,7 @@ export default function RootLayout({
               <main className="flex-1">
                 {children}
               </main>
-              <footer className="border-t py-6 text-center text-xs">
+              <footer className="border-t py-6 text-center text-xs bg-pink-50 dark:bg-gray-900 transition-colors duration-300">
                 <div className="max-w-5xl mx-auto px-4">
                   <p>&copy; {new Date().getFullYear()} All rights reserved.</p>
                 </div>
