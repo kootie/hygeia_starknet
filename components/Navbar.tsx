@@ -2,6 +2,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import ConnectWalletButton from './connectWalletButton'
 
 export default function Navbar() {
   const pathname = usePathname()
@@ -33,6 +34,9 @@ export default function Navbar() {
 </Link>
 
           <div className="flex items-center gap-2"></div>
+        </div>
+        <div>
+          <ConnectWalletButton/>
         </div>
       </div>
     </nav>
