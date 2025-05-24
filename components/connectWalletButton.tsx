@@ -68,15 +68,15 @@ export default function ConnectWalletButton() {
         <button
           onClick={disconnectWallet}
           disabled={isButtonLoading}
-          className="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 disabled:bg-green-400 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200 min-w-[200px]"
+          className="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 disabled:bg-green-400 text-white font-medium py-3 px-6 rounded-full transition-colors duration-200 min-w-[200px]"
         >
           <CheckCircle size={20} />
           <span className="hidden sm:inline">Connected: {formatAddress(address)}</span>
           <span className="sm:hidden">Connected</span>
         </button>
-        <p className="text-xs text-gray-600 text-center">
+        {/* <p className="text-xs text-gray-600 text-center">
           Click to disconnect wallet
-        </p>
+        </p> */}
       </div>
     )
   }
@@ -86,7 +86,7 @@ export default function ConnectWalletButton() {
       <button
         onClick={connectWallet}
         disabled={isButtonLoading}
-        className="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 disabled:cursor-not-allowed text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200 min-w-[200px]"
+        className="flex items-center justify-center gap-2 bg-pink-600 hover:bg-pink-400 disabled:bg-blue-400 disabled:cursor-not-allowed text-white font-medium py-3 px-6 rounded-full transition-colors duration-200 min-w-[200px]"
       >
         {isButtonLoading ? (
           <>
@@ -96,7 +96,7 @@ export default function ConnectWalletButton() {
         ) : (
           <>
             <Wallet size={20} />
-            <span>Connect Braavos Wallet</span>
+            <span>Connect Wallet</span>
           </>
         )}
       </button>
@@ -108,11 +108,11 @@ export default function ConnectWalletButton() {
         </div>
       )}
       
-      {!error && !isConnected && (
+      {/* {!error && !isConnected && (
         <p className="text-xs text-gray-600 text-center">
           Click to open Braavos extension
         </p>
-      )}
+      )} */}
     </div>
   )
 }
